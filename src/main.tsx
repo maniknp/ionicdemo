@@ -2,10 +2,12 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
 
+// console.log(import.meta.env.VITE_SITE_KEY)
+
 const container = document.getElementById('root');
 const root = createRoot(container!);
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <App />
-  </React.StrictMode>
+  // </React.StrictMode>
 );

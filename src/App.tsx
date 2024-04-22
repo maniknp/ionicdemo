@@ -3,6 +3,7 @@ import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
 import Menu from './components/Menu';
 import Page from './pages/Page';
+import  HomePage from  './pages/Home';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -48,6 +49,9 @@ const App: React.FC = () => {
             </Route>
             <Route path="/folder/:name" exact={true}>
               <Page />
+            </Route>
+            <Route path="/pre-printed-barcode-labels" exact={true}>
+              <HomePage />
             </Route>
           </IonRouterOutlet>
         </IonSplitPane>

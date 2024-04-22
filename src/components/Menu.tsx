@@ -23,44 +23,44 @@ interface AppPage {
 
 const appPages: AppPage[] = [
   {
-    title: 'Inbox',
-    url: '/folder/Inbox',
+    title: 'Home',
+    url: '/folder/Home',
     iosIcon: mailOutline,
     mdIcon: mailSharp
   },
   {
-    title: 'Outbox',
-    url: '/folder/Outbox',
+    title: 'Color Inkjet Label Printers',
+    url: '/pre-printed-barcode-labels',
     iosIcon: paperPlaneOutline,
     mdIcon: paperPlaneSharp
   },
-  {
-    title: 'Favorites',
-    url: '/folder/Favorites',
-    iosIcon: heartOutline,
-    mdIcon: heartSharp
-  },
-  {
-    title: 'Archived',
-    url: '/folder/Archived',
-    iosIcon: archiveOutline,
-    mdIcon: archiveSharp
-  },
-  {
-    title: 'Trash',
-    url: '/folder/Trash',
-    iosIcon: trashOutline,
-    mdIcon: trashSharp
-  },
-  {
-    title: 'Spam',
-    url: '/folder/Spam',
-    iosIcon: warningOutline,
-    mdIcon: warningSharp
-  }
+  // {
+  //   title: 'Favorites',
+  //   url: '/folder/Favorites',
+  //   iosIcon: heartOutline,
+  //   mdIcon: heartSharp
+  // },
+  // {
+  //   title: 'Archived',
+  //   url: '/folder/Archived',
+  //   iosIcon: archiveOutline,
+  //   mdIcon: archiveSharp
+  // },
+  // {
+  //   title: 'Trash',
+  //   url: '/folder/Trash',
+  //   iosIcon: trashOutline,
+  //   mdIcon: trashSharp
+  // },
+  // {
+  //   title: 'Spam',
+  //   url: '/folder/Spam',
+  //   iosIcon: warningOutline,
+  //   mdIcon: warningSharp
+  // }
 ];
 
-const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+const labels = ['Color Inkjet Label Printers', 'Inkjet Labels','LPN Labels'];
 
 const Menu: React.FC = () => {
   const location = useLocation();
@@ -69,8 +69,8 @@ const Menu: React.FC = () => {
     <IonMenu contentId="main" type="overlay">
       <IonContent>
         <IonList id="inbox-list">
-          <IonListHeader>Inbox</IonListHeader>
-          <IonNote>hi@ionicframework.com</IonNote>
+          <IonListHeader>pacificbarcode</IonListHeader>
+          <IonNote>sales@pacificbarcode.com</IonNote>
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
@@ -97,4 +97,5 @@ const Menu: React.FC = () => {
   );
 };
 
-export default Menu;
+export default Menu; 
+ 
