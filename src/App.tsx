@@ -5,6 +5,7 @@ import Menu from './components/Menu';
 import Page from './pages/Page';
 import  HomePage from  './pages/Home';
 import  AboutPage from  './pages/About';
+import ParentComponent from './props/ParentComponent';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -56,6 +57,9 @@ const App: React.FC = () => {
             </Route>
             <Route path="/about" exact={true}>
               <AboutPage />
+            </Route>
+            <Route path="/props/parent" exact={true}>
+              <ParentComponent />
             </Route>
           </IonRouterOutlet>
         </IonSplitPane>
