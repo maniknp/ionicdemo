@@ -34,6 +34,12 @@ const appPages: AppPage[] = [
     iosIcon: paperPlaneOutline,
     mdIcon: paperPlaneSharp
   },
+  {
+    title: 'About',
+    url: '/about',
+    iosIcon: paperPlaneOutline,
+    mdIcon: paperPlaneSharp
+  },
   // {
   //   title: 'Favorites',
   //   url: '/folder/Favorites',

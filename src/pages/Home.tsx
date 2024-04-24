@@ -14,18 +14,21 @@ class HomePage extends React.Component {
   }
 
 
-  
-   ionViewWillEnter() {
-    try {
-      const result =  fetchData();
-      // this.setState({ data: result, loading: false });
-      result.then((response) =>{
-        console.log('My response', response);
+
+  ionViewWillEnter() {
+
+    const result = fetchData();
+    result.then(data => {
+      if (data.hasError) {
+        throw new Error(`${data.message} , Code: ${data.code}`);
+      }
+      this.setState({ data: data, loading: false });
+      console.log(data);
+    })
+      .catch(error => {
+        this.setState({ error: `${error}`, loading: false });
+
       })
-      console.log("last line");
-    } catch (error) {
-      // this.setState({ error: 'Failed to fetch data', loading: false });
-    }
 
     // console.log(process.env.TEST_ENV);
     console.log('ionViewWillEnter event fired');
@@ -44,19 +47,12 @@ class HomePage extends React.Component {
   }
 
   render() {
+    const { data, loading, error } = this.state;
+    console.log('loading',loading);
+    
+   
 
-    // const { data, loading, error } = this.state;
-
-    // if (loading) return <div>Loading...</div>;
-    // if (error) return <div>Error: {error}</div>;
-
-    // return (
-    //   <div>
-    //     <h1>Data Loaded</h1>
-    //     {/* Render your data here */}
-    //     <pre>{JSON.stringify(data, null, 2)}</pre>
-    //   </div>
-    // );
+ 
 
 
     return (
@@ -77,12 +73,17 @@ class HomePage extends React.Component {
                 <IonTitle size="large">Home </IonTitle>
             </IonToolbar>
             </IonHeader>
+
+            {loading && <div>Loading...</div>}
+            {error && <div>Error: {error}</div>}
+            {data && (<>
+                  <h1>Data Loaded</h1>
+                   <pre>{JSON.stringify(data, null, 2)}</pre>
+                 </>
+            )}
+          
         </IonContent>
 
-        <div>
-          <h1>Data Loaded</h1>
-    
-        </div>
 
       </IonPage>
     );

@@ -111,3 +111,11 @@ ion-note {
 ion-item.selected {
   --color: var(--ion-color-primary);
 } 
+
+
+ion-col {
+  background-color: #135d54;
+  border: solid 1px #fff;
+  color: #fff;
+  text-align: center;
+}

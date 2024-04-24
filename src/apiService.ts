@@ -1,12 +1,12 @@
 import axios from 'axios';
+const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 const fetchData = async () => {
     try {
-        const response = await axios.get('https://reqres.in/api/users?page=2');
-        // console.log(response);
-        return response;
+        const response = await axios.get(`${BASE_URL}/users?page=2`);
+        return { hasError: false, ...response};
     } catch (error) {
-        console.error("Error",error);
+        return {data:[], hasError: true, message: error.message, status: error.status,code: error.code ,error:error};
     }
 };
 
