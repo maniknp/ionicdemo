@@ -8,7 +8,7 @@ class HomePage extends React.Component {
     super(props);
     this.state = {
       data: null,
-      loading: true,
+      loading: true, 
       error: null,
     };
   }

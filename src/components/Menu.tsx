@@ -17,7 +17,7 @@ import './Menu.css';
 interface AppPage {
   url: string;
   iosIcon: string;
-  mdIcon: string;
+  mdIcon: string; 
   title: string;
 }
 
@@ -49,6 +49,12 @@ const appPages: AppPage[] = [
   {
     title: 'Context 1',
     url: '/context1',
+    iosIcon: paperPlaneOutline,
+    mdIcon: paperPlaneSharp
+  }, 
+  {
+    title: 'Test',
+    url: '/test',
     iosIcon: paperPlaneOutline,
     mdIcon: paperPlaneSharp
   }, 

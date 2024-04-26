@@ -11,7 +11,7 @@ const ChildComponent: React.FC<ContainerProps> = (props) => {
     useEffect(() => {
         // Perform some task when props.myProp changes
         console.log('myProp changed:', props.myProp);
-      }, [props.myProp]);
+      }, [props.myProp]); 
 
       const handleChange = (event) => {
         const newValue = event.target.value;

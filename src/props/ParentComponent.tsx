@@ -29,7 +29,7 @@ const ParentComponent: React.FC = () => {
 
     function testfun(event) {
         let value = event.target.value;
-        console.log(value);
+        setMyVariable(value);
     }
     const debouncedFun = debounce(testfun, 700);
 

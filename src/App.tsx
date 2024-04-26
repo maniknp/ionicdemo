@@ -7,6 +7,7 @@ import  HomePage from  './pages/Home';
 import  AboutPage from  './pages/About';
 import ParentComponent from './props/ParentComponent';
 import ContextComponent1 from './context1/Index';
+import  TestPage from  './pages/TestPage';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -62,9 +63,15 @@ const App: React.FC = () => {
             <Route path="/props/parent" exact={true}>
               <ParentComponent />
             </Route>
+            
             <Route path="/context1" exact={true}>
               <ContextComponent1 />
             </Route>
+
+            <Route path="/test" exact={true}>
+              <TestPage />
+            </Route>
+
           </IonRouterOutlet>
         </IonSplitPane>
       </IonReactRouter>
